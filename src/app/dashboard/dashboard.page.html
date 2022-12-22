@@ -1,0 +1,242 @@
+<ion-content>
+  <div class="prin">
+    <div class="content">
+      <div id="viewport">
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <header>
+            <img class="admin" src="assets/images/jeans.jpg" alt="">
+            <a href="#">ADMIN</a>
+          </header>
+          <ul class="nav">
+            <li>
+              <a routerLink="/accueil">
+                <i class="zmdi zmdi-view-dashboard"></i> Accueil
+              </a>
+            </li>
+            <li>
+              <a routerLink="/regions">
+                <i class="zmdi zmdi-view-dashboard"></i> Régions
+              </a>
+            </li>
+            <li>
+              <a routerLink="/regions-details">
+                <i class="zmdi zmdi-link"></i> Région détails
+              </a>
+            </li>
+            <!-- <li>
+              <a routerLink="#">
+                <i class="zmdi zmdi-widgets"></i> Overview
+              </a>
+            </li>
+            <li>
+              <a routerLink="#">
+                <i class="zmdi zmdi-calendar"></i> Events
+              </a>
+            </li>
+            <li>
+              <a routerLink="#">
+                <i class="zmdi zmdi-info-outline"></i> About
+              </a>
+            </li> -->
+            <li>
+              <a routerLink="/login">
+                <i class="zmdi zmdi-settings"></i> Login
+              </a>
+            </li>
+            <li>
+              <a routerLink="/contact">
+                <i class="zmdi zmdi-comment-more"></i> Contacts
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Content -->
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <h1> Tableau de bord</h1>
+            </div>
+          </div>
+        </div>
+        <!-- <ion-content> -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-3"></div>
+
+            <div class="col mx-auto d-block formulaire">
+
+              <div class="text">Ajouter une region</div>
+
+
+              <form >
+                <div class="row">
+                  <div class="col-lg-6 col-xs-12">
+                    <label for="formGroupExampleInput">Nom</label>
+                    <input type="text" class="form-control" 
+
+                    id="nomregions"
+                  name="regionDashboard.nomregions"
+                  [(ngModel)]="regionDashboard.nomregions"
+               
+
+                    placeholder="Nom de la region">
+                  </div>
+                  <div class=" col-lg-6 col-xs-12">
+                    <label for="formGroupExampleInput">Code-Region</label>
+                    <input type="text" class="form-control" 
+
+
+                    id="coderegion"
+                  name="regionDashboard.coderegion"
+                  [(ngModel)]="regionDashboard.coderegion"
+                 
+                  
+                    placeholder="Code de la region">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-6  col-xs-12">
+                    <label for="formGroupExampleInput">Superficie</label>
+                    <input type="text" class="form-control" 
+
+
+                    id="regionDashboard.activiterregion"
+              
+                  [(ngModel)]="regionDashboard.activiterregion"     name="regionDashboard.activiterregion"
+               
+
+
+                    placeholder="Superficie de la region">
+                  </div>
+                  <select class="form-select" aria-label="Default select example" name="pays"  id="pays" [(ngModel)]="regionDashboard.nompays" name="regionDashboard.nompays">
+                    <option value=""> choisir un pays </option>
+                    <option *ngFor="let payss of pays" value="{{payss.nompays}}"> {{payss.nompays}}</option>
+        
+                  </select>
+                </div> 
+
+                <div class="row">
+                  <div class=" col-lg-6  col-xs-12">
+                    <label for="formGroupExampleInput">Activité</label>
+                    <input type="text" class="form-control"
+                    
+                    id="superficieregion"
+                 
+                  [(ngModel)]="regionDashboard.superficieregion" name="regionDashboard.superficieregion"
+               
+
+                    placeholder="Activité de la region">
+                  </div>
+                  <div class="col-lg-6  col-xs-12">
+                    <label for="formGroupExampleInput">Langue</label>
+                    <input type="text" class="form-control" 
+                    
+                    id="languemregion"
+               
+                  [(ngModel)]="regionDashboard.languemregion" name="regionDashboard.languemregion"
+                 
+                    
+                    placeholder="Langue parlée">
+                  </div>
+                </div>
+                <textarea class="form-control" id="textAreaExample1" rows="3" 
+                
+                id="description"
+                name="description"
+                [(ngModel)]="regionDashboard.description" name="regionDashboard.description"
+            
+
+                name="description">Description</textarea>
+
+                <div>
+                  <label for="files" class="ajoutimg"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16">
+                    <path d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                  </svg>
+            Choisir une image</label>
+                  <input id="files" style="visibility:hidden;" type="file"   [(ngModel)]="regionDashboard.imageregion" name="regionDashboard.imageregion"  (change)="chargeImage($event)"  >
+                </div>
+
+              </form>
+
+              <button type="submit" class="btn btn-secondary mx-auto d-block" (click)="AjouterRegions()" >Ajouter</button>
+            </div>
+
+
+            <div class="col-3"></div>
+          </div>
+
+        </div>
+        <!-- </ion-content> -->
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <h2 class="lreg">Liste Region</h2>
+              <div class="container">
+
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Code région</th>
+                      <th>Nom</th>
+                      <th>Domaine d'activité</th>
+                      <th>Superficie</th>
+                      <th>Population</th>
+                      <th>Langue</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01</td>
+                      <td>Kayes</td>
+                      <td>Commerce</td>
+                      <td>127000 Km2</td>
+                      <td>3 54545</td>
+                      <td>Dogon</td>
+                      <i class="fas fa-pen-to-square"></i>
+                      <i class="fas fa-trash"></i>
+                    </tr>
+                    <tr>
+                      <td>04</td>
+                      <td>Segou</td>
+                      <td>Agriculture</td>
+                      <td>17000 Km2</td>
+                      <td>5 4545</td>
+                      <td>Peulh</td>
+                      <i class="fas fa-pen-to-square"></i>
+                      <i class="fas fa-trash"></i>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>Kidal</td>
+                      <td>Elevage</td>
+                      <td>127000 Km2</td>
+                      <td>3 54545</td>
+                      <td>Malinké</td>
+                      <i class="fas fa-pen-to-square"></i>
+                      <i class="fas fa-trash"></i>
+                    </tr>
+                    <tr>
+                      <td>09</td>
+                      <td>Mopti</td>
+                      <td>Pêche</td>
+                      <td>7000 Km2</td>
+                      <td>4545</td>
+                      <td>Senoufo</td>
+                      <i class="fas fa-pen-to-square"></i>
+                      <i class="fas fa-trash"></i>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <P class="vide"></P>
+</ion-content>

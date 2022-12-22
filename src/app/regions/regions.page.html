@@ -1,0 +1,176 @@
+<ion-content>
+
+  <div class="prin">
+    <div class="container text-center">
+      <div class="row row-cols-4">
+
+        <div class="col col-xs-12 col-lg-3 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">MALI <br> Bamako</h5>
+              <img src="assets/images/images.png" class="card-img-top" alt="...">
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col col-xs-12 col-lg-3 col-sm-12 ">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">REGIONS</h5>
+              <p style="font-weight: bold;" class="card-text">{{nbreRg}}</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-xs-12 col-lg-3 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">SUPERFICIE</h5>
+              <p style="font-weight: bold;" class="card-text">1 241 238 KM²</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-xs-12 col-lg-3 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">POPULATION</h5>
+              <p style="font-weight: bold;" class="card-text">21 749 013 hab</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-12" style="font-weight: bolder;">LES REGIONS</div>
+    </div>
+  </div>
+
+  <div class="section">
+
+    <form>
+      <ion-searchbar placeholder="Custom Placeholder"  name="searchText"
+      [(ngModel)]="searchText"></ion-searchbar>
+      <!-- <button class="btn btnAjouter recherche" style="display:flex ;"><i class="bi bi-search "></i>
+        <input type="text" style=" border: 0; background: transparent; font-size: 12px; " name="searchText"
+          [(ngModel)]="searchText"></button> -->
+    </form>
+
+    <ion-card>
+
+      <ion-card-content>
+        <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+          <div class="d-flex justify-content-center mb-4">
+            <button class="carousel-control-prev position-relative" type="button"
+              data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next position-relative" type="button"
+              data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="carousel-inner py-4">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4"
+                    *ngFor="let lesregions of mesregion | filter: searchText| paginate: { itemsPerPage: 3, currentPage: p }">
+                    <div class="cardi">
+                      <div class="cardext">
+                        <!-- <img src="assets/images/Intro_kidal2_2.jpg" class="card-img" alt="Waterfall" /> -->
+                        <img src="assets/images/{{lesregions.images}}" class="card-img" alt="Waterfall" />
+                        <div class="card-bod">
+                          <h5 class="card-title" style="font-weight: bolder;">{{lesregions.nomregions}}</h5>
+
+
+                          <p class="card-text">Description {{lesregions.description}}</p>
+
+                          <!-- <p class="card-text">
+                            La région de Kidal est la huitième région administrative du Mali depuis mars 2012. Elle
+                            sétend sur 260 000 km². Sa capitale est la ville de Kidal.
+                            La région de Kidal est la huitième région administrative du Mali depuis mars 2012. Elle
+                            s'étend sur 260 000 km². Sa capitale est la ville de Kidal.
+
+                          </p> -->
+                          <a routerLink="/regions-details" class="btn btn-primary">Voir+</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="cardi">
+                      <div class="cardext">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp" class="card-img"
+                          alt="Sunset Over the Sea" />
+                        <div class="card-bod">
+                          <h5 class="card-title" style="font-weight: bold;">SIKASSO</h5>
+                          <p class="card-text">
+                            La région de Kidal est la huitième région administrative du Mali depuis mars 2012. Elle
+                            s’étend sur 260 000 km². Sa capitale est la ville de Kidal. La région de Kidal est la
+                            huitième
+                            région administrative du Mali depuis mars 2012. Elle s’étend sur 260 000 km². Sa capitale
+                            est
+                            la ville de Kidal.
+                          </p>
+                          <a routerLink="/regions-details" class="btn btn-primary">Voir+</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <!-- <div class="col-lg-4 d-none d-lg-block">
+                    <div class="cardi">
+                      <div class="cardext">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/183.webp" class="card-img"
+                          alt="Sunset over the Sea" />
+                        <div class="card-bod">
+                          <h5 class="card-title" style="font-weight: bold;">KOULIKORO</h5>
+                          <p class="card-text">
+                            La région de Kidal est la huitième région administrative du Mali depuis mars 2012. Elle
+                            s'étend sur 260 000 km². Sa capitale est la ville de Kidal. La région de Kidal est la
+                            huitième
+                            région administrative du Mali depuis mars 2012. Elle s'étend sur 260 000 km². Sa capitale
+                            est
+                            la ville de Kidal.
+                          </p>
+                          <a routerLink="/regions-details" class="btn btn-primary">Voir+</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Single item -->
+
+      </ion-card-content>
+      <div class="pag">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </ion-card>
+
+
+
+
+  </div>
+  <p class="vide"></p>
+
+</ion-content>

@@ -1,0 +1,49 @@
+//***************** STYLE APPLIQUER AU CSS **************************//
+  
+.foot{
+    // position: relative;
+    // display: flex;
+    // color: orangered;
+    // text-align: center;
+    // background-color: black;
+    // padding: 14px 16px;
+    // text-decoration: none;
+    // margin: 0px;
+    // padding: 34px;
+    // margin-top: 0px;
+    // padding-left: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 80px;
+    width: 100%;
+    // margin-top:100px !important ;
+    background-color: black;
+    color:white;
+    
+   
+
+
+}
+
+
+.pied{
+   
+    // padding-left: 20px;
+    // font-weight: bold;
+    // padding-right: 189px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:white;
+    margin-top: 0;
+
+}
+.socio{
+    display: flex;
+    justify-content: space-between;
+}

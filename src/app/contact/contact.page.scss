@@ -1,0 +1,22 @@
+.prin{
+    padding-top: 15vh;
+}
+.vide{
+    padding-top: 100PX;
+  }
+.title{
+    font-size: 20PX;
+  }
+  .button{
+    width: 100PX;
+    margin-left: 50%;
+    transition: .4s;
+    background-color: #3880ff	;
+  }
+
+
+.button:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+  }
+

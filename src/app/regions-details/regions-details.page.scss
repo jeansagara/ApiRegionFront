@@ -1,0 +1,302 @@
+.prin{
+    padding-top: 10vh;
+}
+
+.vide{
+    padding-top: 100PX;
+  }
+
+  .carousel-item{
+    width: 1000PX;
+  }
+  b{
+    margin-left: 48px;
+  }
+  .col-7{
+    MARGIN-TOP: 28px;
+    MARGIN-LEFT: 130px
+}
+ion-label{
+    font-weight: bold;
+    font-size: 36PX;
+}
+
+
+// la partie commentaire
+
+body{margin-top:20px;}
+
+.content-item {
+    padding:30px 0;
+	background-color:#FFFFFF;
+}
+
+.content-item.grey {
+	background-color:#F0F0F0;
+	padding:50px 0;
+	height:100%;
+}
+
+.content-item h2 {
+	font-weight:700;
+	font-size:35px;
+	line-height:45px;
+	text-transform:uppercase;
+	margin:20px 0;
+}
+
+.content-item h3 {
+	font-weight:400;
+	font-size:20px;
+	color:#555555;
+	margin:10px 0 15px;
+	padding:0;
+}
+
+.content-headline {
+	height:1px;
+	text-align:center;
+	margin:20px 0 70px;
+}
+
+.content-headline h2 {
+	background-color:#FFFFFF;
+	display:inline-block;
+	margin:-20px auto 0;
+	padding:0 20px;
+}
+
+.grey .content-headline h2 {
+	background-color:#F0F0F0;
+}
+
+.content-headline h3 {
+	font-size:14px;
+	color:#AAAAAA;
+	display:block;
+}
+
+
+#comments {
+    box-shadow: 0 -1px 6px 1px rgba(0,0,0,0.1);
+	background-color:#FFFFFF;
+}
+
+#comments form {
+	margin-bottom:30px;
+}
+
+#comments .btn {
+	margin-top:7px;
+}
+
+#comments form fieldset {
+	clear:both;
+}
+
+#comments form textarea {
+	height:100px;
+}
+
+#comments .media {
+	border-top:1px dashed #DDDDDD;
+	padding:20px 0;
+	margin:0;
+}
+
+#comments .media > .pull-left {
+    margin-right:20px;
+}
+
+#comments .media img {
+	max-width:100px;
+}
+
+#comments .media h4 {
+	margin:0 0 10px;
+}
+
+#comments .media h4 span {
+	font-size:14px;
+	float:right;
+	color:#999999;
+}
+
+#comments .media p {
+	margin-bottom:15px;
+	text-align:justify;
+}
+
+#comments .media-detail {
+	margin:0;
+}
+
+#comments .media-detail li {
+	color:#AAAAAA;
+	font-size:12px;
+	padding-right: 10px;
+	font-weight:600;
+}
+
+#comments .media-detail a:hover {
+	text-decoration:underline;
+}
+
+#comments .media-detail li:last-child {
+	padding-right:0;
+}
+
+#comments .media-detail li i {
+	color:#666666;
+	font-size:15px;
+	margin-right:10px;
+}
+.content-item{
+    margin-top: 80px;
+    padding-left: 193px;
+}
+
+.information{
+	font-size: 25PX;
+	color: red($color: #000000);
+}
+// .table{
+// 	padding-top: 400px;
+// }
+.col{
+	margin-top: 40px;
+}
+
+// commentaire Alassane Malle
+
+.navbar-nav{
+    width: 100%;
+}
+
+@media(min-width:568px){
+    .end{
+        margin-left: auto;
+    }
+}
+
+@media(max-width:768px){
+    #post{
+        width: 100%;
+    }
+}
+#clicked{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+    width: 100%;
+    background-color: #ecb21f;
+    border: 1px solid white;
+    color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 13px; 
+}
+
+#profile{
+    background-color: unset;
+
+} 
+
+.btn-secondary{
+    background-color: #353558;
+    margin-top: 20px;
+
+
+}
+.btn-secondary:hover{
+    background-color: #f2f7f7;
+    color: black;
+}
+
+body{
+    background-color: rgb(255, 251, 251);
+}
+
+#nav-items li a,#profile{
+    text-decoration: none;
+    color: rgb(224, 219, 219);
+    background-color: #353558;
+}
+
+
+.comments{
+    margin-top: 5%;
+    margin-left: 20px;
+}
+
+.darker{
+    border: 1px solid white;
+    background-color: #353558;
+    float: right;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+
+.comment{
+    border: 1px solid white;
+    background-color:  #368E8C;
+    float: left;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 10px;
+
+}
+.comment h4,.comment span,.darker h4,.darker span{
+    display: inline;
+}
+
+.comment p,.comment span,.darker p,.darker span{
+    color: rgb(184, 183, 183);
+}
+
+h1,h4{
+    color: white;
+    font-weight: bold;
+}
+label{
+    color: rgb(212, 208, 208);
+}
+
+#align-form{
+    margin-top: 20px;
+}
+.form-group p a{
+    color: white;
+}
+
+#checkbx{
+    background-color: rgb(255, 255, 255);
+}
+
+#darker img{
+    margin-right: 15px;
+    position: static;
+}
+
+.form-group input,.form-group textarea{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+
+
+ form{
+    margin-top: 45px;
+    border: 1px solid white;
+    background-color:#368E8C;
+    border-radius: 5px;
+    padding: 20px;
+}
+.ccmt{
+    color: black;
+    margin-top: 15px;
+}

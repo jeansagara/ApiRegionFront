@@ -1,0 +1,44 @@
+<ion-content>
+  <div class="prin">
+
+    <div class="container text-center">
+      <div class="row">
+
+        <div class="col">
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Formulaire de contact</ion-title>
+            </ion-toolbar>
+          </ion-header>
+
+          <form #form="ngForm" (ngSubmit)="submitForm(form)">
+            <ion-item>
+              <ion-label class="title" position="floating">Nom</ion-label>
+              <ion-input type="text" name="name" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label class="title" position="floating">Adresse e-mail</ion-label>
+              <ion-input type="email" name="email" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label class="title" position="floating">Objet</ion-label>
+              <ion-input type="text" name="subject" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label class="title" position="floating">Message</ion-label>
+              <ion-textarea name="message" ngModel required></ion-textarea>
+            </ion-item>
+
+            <ion-button type="button" type="submit" [disabled]="!form.valid" expand="block">Envoyer</ion-button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <P class="vide"></P>
+</ion-content>
