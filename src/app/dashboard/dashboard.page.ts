@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PaysService } from '../CLASS/pays';
+import { Regions } from '../CLASS/regions';
 
 import { PaysServiceService } from '../SERVICE/pays-service.service';
 import { RegionServiceService } from '../SERVICE/region-service.service';
@@ -10,24 +12,27 @@ import { RegionServiceService } from '../SERVICE/region-service.service';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  image : any
+  images : any
   region:any
   file:any
   formmodule!: FormGroup;
   pays:any
 
 
-  regionDashboard : any = {
-    nomregions : null,
-    coderegion: null,
-    activiterregion: null,
-    superficieregion: null,
-    languemregion: null,
-    pays:null,
-    description :null,
-    
-
+  regionDashboard : Regions = {
+    id_regions: 0,
+    nomregions: '',
+    coderegion: '',
+    activiterregion: '',
+    superficieregion: '',
+    languemregion: '',
+    description: '',
+    images: '',
+    nombrecommentaire: '',
+    pays: new PaysService,
   };
+
+  
 
 
   regions:any
@@ -42,12 +47,16 @@ export class DashboardPage implements OnInit {
       this.pays=data;
       console.log(data);
     })
+    this.regionService.getAll().subscribe(reponse => {
+      console.log(reponse)
+      this.regions = reponse;
+    })
    
   }
 
   chargeImage(event: any){
-    this.image = event.target["files"][0]
-    console.log(this.image);
+    this.images = event.target.files[0]
+    console.log(this.images);
   }
 
   AjouterRegions(){
@@ -58,11 +67,17 @@ export class DashboardPage implements OnInit {
       this.regionDashboard.superficieregion,
       this.regionDashboard.languemregion,
       this.regionDashboard.description,
-      this.image,this.regionDashboard.pays
-      
-    ).subscribe(data=>{
+      this.regionDashboard.images = this.images,
+      this.regionDashboard.pays
+      ).subscribe(data=>{
       this.regions=data;
       console.log(data)
+    })
+  }
+  supprimerRegion(id : number){
+    console.log("j s8 clk")
+    return this.regionService.deleteRegion(id).subscribe(d => {
+      alert(" supprimer !")
     })
   }
 }

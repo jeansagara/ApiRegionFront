@@ -1,3 +1,5 @@
+import { PaysService } from "./pays";
+
 export class Regions {
 
         id_regions !: number;
@@ -9,4 +11,5 @@ export class Regions {
         images !: string;
         description !: string;
         nombrecommentaire !: string;
+        pays!:PaysService
 }

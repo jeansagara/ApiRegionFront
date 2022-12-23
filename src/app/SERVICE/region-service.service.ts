@@ -19,7 +19,7 @@ export class RegionServiceService {
     superficieregion:any,
     languemregion:any,
     description:any,
-    image:any,
+    images:any,
     pays:any
   ):Observable<any>{
     let data = new FormData();
@@ -29,7 +29,15 @@ export class RegionServiceService {
     data.append("superficieregion", superficieregion)
     data.append("languemregion", languemregion)
     data.append("description", description)
-    data.append("images", image)
+    data.append("images", images)
     return this.http.post(`http://localhost:8080/projet/odk/Regions/ajouterRegion/${pays}`, data)
+  }
+
+  getAll() {
+    return this.http.get(`http://localhost:8080/projet/odk/Regions/liste`);
+  }
+
+  deleteRegion(id : number) {
+    return this.http.delete(`http://localhost:8080/projet/odk/Regions/supprimer/${id}`);
   }
 }
