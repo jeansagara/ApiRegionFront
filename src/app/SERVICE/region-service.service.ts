@@ -21,6 +21,7 @@ export class RegionServiceService {
     description:any,
     images:any,
     pays:any
+    
   ):Observable<any>{
     let data = new FormData();
     data.append("nomregions", nomregions)
